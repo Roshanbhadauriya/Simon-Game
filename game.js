@@ -43,7 +43,13 @@ setTimeout(function(){
 },100);
 
 }
-
+$(".start").click(function() {
+  if (!started) {
+    $("#level-title").text("Level " + level);
+    nextSequence();
+    started = true;
+  }
+});
 $(document).keypress(function() {
     if (!started) {
       $("#level-title").text("Level " + level);
